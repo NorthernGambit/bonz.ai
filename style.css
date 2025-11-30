@@ -25,6 +25,7 @@
 	--txt-grey: #393939;
 	--txt-green: #009966;
 	--txt-purple: #9810fa;
+	--txt-yellow: #ffcc00;
 }
 
 a {
@@ -260,6 +261,12 @@ a {
 	color: var(--bg-green);
 	background-color: var(--bg-white);
 }
+
+.btn--xl {
+	width: 100%;
+	height: 64px;
+	padding: 0;
+}
 /* #endregion */
 
 /* ============================================= */
@@ -325,6 +332,154 @@ a {
 	text-align: center;
 }
 /* #endregion */
+/* ============================================= */
+/* #region BOOK YOUR STAY */
+/* ============================================= */
+
+.room-card {
+	/* COMPONENT */
+	.room-card__icon {
+		color: var(--txt-black);
+	}
+	.room-card__icon--purple {
+		color: var(--txt-purple);
+	}
+	.room-card__icon--green {
+		color: var(--txt-green);
+	}
+	.room-card__icon--yellow {
+		color: var(--txt-yellow);
+	}
+
+	background-color: var(--bg-white);
+	display: flex;
+	border-radius: 25px;
+	overflow: hidden;
+	box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.25);
+
+	.room-card__figure-box {
+		position: relative;
+		flex-basis: 40%;
+
+		.room-card__img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		.room-card__rating {
+			display: flex;
+			gap: 6px;
+			padding: 0.75rem;
+			border-radius: 24px;
+			font-size: 1.25rem;
+			align-items: center;
+			position: absolute;
+			top: 1rem;
+			right: 1rem;
+			background-color: var(--bg-white);
+		}
+	}
+
+	.room-card__info-box {
+		flex-basis: 60%;
+		padding: 1.75rem;
+		display: flex;
+		flex-direction: column;
+		gap: 1.25rem;
+
+		.room-card__header {
+			display: flex;
+			justify-content: space-between;
+
+			.room-card__title-box {
+				.room-card__title {
+					font-size: 2rem;
+					font-weight: 400;
+					color: var(--txt-black);
+				}
+
+				.room-card__title-sub {
+					display: flex;
+					gap: 0.5rem;
+
+					.room-card__title-sub {
+						font-size: 1.25rem;
+						font-weight: 400;
+						color: var(--txt-black);
+					}
+
+					.room-card__title-sub-txt:first-of-type {
+						margin-right: 0.75rem;
+					}
+				}
+			}
+
+			.room-card__price-box {
+				.room-card__price {
+					font-size: 2rem;
+					font-weight: 400;
+					color: var(--txt-green);
+				}
+
+				.room-card__price-sub {
+					font-size: 1.25rem;
+					font-weight: 400;
+					color: var(--txt-black);
+				}
+			}
+		}
+
+		.room-card__features {
+			.room-card__features-title {
+				display: flex;
+				align-items: center;
+				gap: 0.5rem;
+				font-size: 1.25rem;
+				font-weight: 400;
+				color: var(--txt-black);
+				margin-bottom: 0.5rem;
+			}
+
+			.room-card__ul {
+				list-style: none;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 1rem;
+
+				.room-card__li {
+					font-size: 1rem;
+					font-weight: 400;
+					color: var(--txt-black);
+					background-color: var(--bg-grey);
+					padding: 6px;
+					border-radius: 5px;
+				}
+
+				.room-card__li--purple {
+					color: var(--txt-purple);
+				}
+			}
+		}
+
+		.room-card__sustainability {
+			.room-card__sustainability-title,
+			.room-card__sustainability-sub {
+				font-size: 1.25rem;
+				font-weight: 400;
+				color: var(--txt-black);
+			}
+
+			.room-card__sustainability-title {
+				margin-bottom: 0.25rem;
+			}
+		}
+	}
+}
+
+/* #endregion */
+
 /* #endregion */
 /* #endregion */
 

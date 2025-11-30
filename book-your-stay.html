@@ -4,6 +4,10 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="./style.css" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+			rel="stylesheet"
+		/>
 		<title>Book Your Stay</title>
 	</head>
 	<body>
@@ -99,6 +103,125 @@
 					</div>
 					<button type="button" class="btn">Book Now</button>
 				</form>
+				<section class="rooms">
+					<h2 class="rooms__title"></h2>
+					<p class="rooms__description"></p>
+					<article class="room-card">
+						<figure class="room-card__figure-box">
+							<img
+								src="./assets/photos/01-day.jpg"
+								alt="Inside view of EcoSmart Suite"
+								class="room-card__img"
+							/>
+							<figcaption
+								class="room-card__rating"
+								aria-label="4.9 out of 5 stars"
+							>
+								<i
+									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
+									aria-hidden="true"
+								>
+									star </i
+								>4.9
+							</figcaption>
+						</figure>
+						<div class="room-card__info-box">
+							<header class="room-card__header">
+								<section class="room-card__title-box">
+									<h2 class="room-card__title">
+										EcoSmart Suite
+									</h2>
+									<div class="room-card__title-sub">
+										<i
+											class="material-symbols-outlined room-card__icon"
+											aria-hidden="true"
+										>
+											group
+										</i>
+										<p class="room-card__title-sub">
+											Up to 2
+										</p>
+										<p class="room-card__title-sub">
+											45 m2
+										</p>
+									</div>
+								</section>
+								<section class="room-card__price-box">
+									<h3 class="room-card__price">$299</h3>
+									<p class="room-card__price-sub">
+										per night
+									</p>
+								</section>
+							</header>
+							<section class="room-card__features">
+								<h3 class="room-card__features-title">
+									<i
+										class="material-symbols-outlined room-card__icon"
+										aria-hidden="true"
+									>
+										wifi
+									</i>
+									Features
+								</h3>
+								<ul class="room-card__ul">
+									<li class="room-card__li">King size bed</li>
+									<li class="room-card__li">Ocean View</li>
+									<li class="room-card__li">Smart climate</li>
+									<li class="room-card__li">
+										Premium Toiletries
+									</li>
+								</ul>
+							</section>
+							<section class="room-card__features">
+								<h3 class="room-card__features-title">
+									<i
+										class="material-symbols-outlined room-card__icon room-card__icon--purple"
+										aria-hidden="true"
+									>
+										network_intelligence
+									</i>
+									AI Features
+								</h3>
+								<ul class="room-card__ul">
+									<li
+										class="room-card__li room-card__li--purple"
+									>
+										Voice Control
+									</li>
+									<li
+										class="room-card__li room-card__li--purple"
+									>
+										Smart Lighting
+									</li>
+									<li
+										class="room-card__li room-card__li--purple"
+									>
+										Digital Concierge
+									</li>
+								</ul>
+							</section>
+							<section class="room-card__sustainability">
+								<h3 class="room-card__sustainability-title">
+									<i
+										class="material-symbols-outlined room-card__icon room-card__icon--green"
+										aria-hidden="true"
+									>
+										eco
+									</i>
+									Sustainability
+								</h3>
+								<p class="room-card__sustainability-sub">
+									100% renewable energy, recycled materials
+								</p>
+							</section>
+							<footer class="room-card__footer">
+								<button class="btn btn--xl">
+									Reserve Room
+								</button>
+							</footer>
+						</div>
+					</article>
+				</section>
 			</div>
 		</main>
 		<footer class="footer">
