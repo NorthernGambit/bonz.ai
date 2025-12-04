@@ -11,8 +11,39 @@
 		<title>Home</title>
 	</head>
 	<body>
+		<!-- HAMBURGER MENU STUFF -->
+		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet menu, men känns onödigt.  -->
+		<!-- <div class="mobile-menu"></div> -->
+		<input
+			type="checkbox"
+			class="mobile-menu__toggle"
+			aria-hidden="true"
+			tabindex="-1"
+			id="isMenuChecked"
+		/>
+		<label
+			for="isMenuChecked"
+			class="mobile-menu__overlay"
+			tabindex="-1"
+			aria-hidden="true"
+		></label>
+		<label for="isMenuChecked" tabindex="0" class="mobile-menu__btn"
+			><span class="visually-hidden">Open Menu</span
+			><img
+				src="./assets/svg/menu-open.svg"
+				class="mobile-menu__open"
+				alt=""
+				aria-hidden="true"
+			/><img
+				src="./assets/svg/menu-close.svg"
+				class="mobile-menu__close"
+				alt=""
+				aria-hidden="true"
+			/>
+		</label>
+		<!-- HEADER -->
 		<header class="header">
-			<div class="wrapper">
+			<div class="wrapper wrapper--header">
 				<img
 					src="./assets/logo/bonz.ai-logo-color-landscape.png"
 					alt="bonz.ai logo"
@@ -46,7 +77,9 @@
 				</nav>
 			</div>
 		</header>
+		<!-- MAIN -->
 		<main class="home">
+			<!-- HERO SECTION -->
 			<section class="hero">
 				<div class="wrapper">
 					<h1 class="page-title">
@@ -60,6 +93,7 @@
 					><button class="btn btn--clear">Learn more</button>
 				</div>
 			</section>
+			<!-- VISION SECTION -->
 			<section class="vision">
 				<div class="wrapper">
 					<h2 class="section-title">Our vision</h2>
@@ -70,7 +104,7 @@
 						travel is both smart and sustainable.
 					</p>
 					<section class="grid grid--home">
-						<section class="card">
+						<article class="card">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -82,8 +116,8 @@
 								recommendations, and seamless service through
 								advanced AI technology.
 							</p>
-						</section>
-						<section class="card">
+						</article>
+						<article class="card">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -94,8 +128,8 @@
 								Carbon-neutral operations, renewable energy, and
 								eco-friendly materials throughout the property.
 							</p>
-						</section>
-						<section class="card">
+						</article>
+						<article class="card">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -107,8 +141,8 @@
 								responsibility without compromise on quality or
 								experience.
 							</p>
-						</section>
-						<section class="card">
+						</article>
+						<article class="card">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -120,10 +154,11 @@
 								control, and intelligent lighting that adapts to
 								you.
 							</p>
-						</section>
+						</article>
 					</section>
 				</div>
 			</section>
+			<!-- NUMBERS SECTION -->
 			<section class="numbers">
 				<div class="wrapper">
 					<h2 class="section-title">
@@ -133,7 +168,7 @@
 						Our commitment to the planet, measured and verified
 					</p>
 					<section class="grid grid--home">
-						<section class="card card--center">
+						<article class="card card--center">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -148,8 +183,8 @@
 								Advanced water recycling and smart usage
 								monitoring
 							</p>
-						</section>
-						<section class="card card--center">
+						</article>
+						<article class="card card--center">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -163,8 +198,8 @@
 							<p class="card__description">
 								All energy sourced from renewable solar panels
 							</p>
-						</section>
-						<section class="card card--center">
+						</article>
+						<article class="card card--center">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -178,8 +213,8 @@
 							<p class="card__description">
 								HEPA filtration and natural ventilation systems
 							</p>
-						</section>
-						<section class="card card--center">
+						</article>
+						<article class="card card--center">
 							<i
 								class="material-symbols-outlined card__icon"
 								aria-hidden="true"
@@ -193,10 +228,11 @@
 							<p class="card__description">
 								Comprehensive recycling and composting programs
 							</p>
-						</section>
+						</article>
 					</section>
 				</div>
 			</section>
+			<!-- YOUR STAY SECTION -->
 			<section class="your-stay">
 				<div class="wrapper">
 					<section class="your-stay__info-box">
@@ -237,6 +273,7 @@
 					/>
 				</div>
 			</section>
+			<!-- CTA SECTION -->
 			<section class="cta">
 				<div class="wrapper">
 					<h2 class="section-title section-title--white">
@@ -250,6 +287,7 @@
 				</div>
 			</section>
 		</main>
+		<!-- FOOTER -->
 		<footer class="footer">
 			<div class="wrapper">
 				<section class="footer__logo-box">

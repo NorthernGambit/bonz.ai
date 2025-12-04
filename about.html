@@ -7,8 +7,39 @@
 		<title>About</title>
 	</head>
 	<body>
+		<!-- HAMBURGER MENU STUFF -->
+		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet menu, men känns onödigt.  -->
+		<!-- <div class="mobile-menu"></div> -->
+		<input
+			type="checkbox"
+			class="mobile-menu__toggle"
+			aria-hidden="true"
+			tabindex="-1"
+			id="isMenuChecked"
+		/>
+		<label
+			for="isMenuChecked"
+			class="mobile-menu__overlay"
+			tabindex="-1"
+			aria-hidden="true"
+		></label>
+		<label for="isMenuChecked" tabindex="0" class="mobile-menu__btn"
+			><span class="visually-hidden">Open Menu</span
+			><img
+				src="./assets/svg/menu-open.svg"
+				class="mobile-menu__open"
+				alt=""
+				aria-hidden="true"
+			/><img
+				src="./assets/svg/menu-close.svg"
+				class="mobile-menu__close"
+				alt=""
+				aria-hidden="true"
+			/>
+		</label>
+		<!-- HEADER -->
 		<header class="header">
-			<div class="wrapper">
+			<div class="wrapper wrapper--header">
 				<img
 					src="./assets/logo/bonz.ai-logo-color-landscape.png"
 					alt="bonz.ai logo"
@@ -40,7 +71,9 @@
 				</nav>
 			</div>
 		</header>
+		<!-- MAIN -->
 		<main class="about">
+			<!-- HERO SECTION -->
 			<section class="hero">
 				<div class="wrapper">
 					<h1 class="page-title">About Bonz.ai</h1>
@@ -50,6 +83,7 @@
 					</h2>
 				</div>
 			</section>
+			<!-- OUR STORY SECTION -->
 			<section class="our-story">
 				<div class="wrapper">
 					<h2 class="section-title">Our story</h2>
@@ -76,6 +110,7 @@
 					</p>
 				</div>
 			</section>
+			<!-- OVERVIEW SECTION -->
 			<section class="overview">
 				<div class="wrapper">
 					<nav class="feature-nav">
@@ -180,6 +215,7 @@
 					</section>
 				</div>
 			</section>
+			<!-- CTA SECTION -->
 			<section class="cta">
 				<div class="wrapper">
 					<h2 class="section-title section-title--white">
@@ -217,6 +253,7 @@
 				</div>
 			</section>
 		</main>
+		<!-- FOOTER -->
 		<footer class="footer">
 			<div class="wrapper">
 				<section class="footer__logo-box">
