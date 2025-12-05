@@ -11,8 +11,12 @@
 		<title>Home</title>
 	</head>
 	<body>
+		<!-- Upptäckte denna när vi gick igenom WCAG på hemsidor, smidig o ganska enkel att implementera -->
+		<a href="#skipTo" class="skip-to-content" tabindex="0"
+			>Skip to content</a
+		>
 		<!-- HAMBURGER MENU STUFF -->
-		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet menu, men känns onödigt.  -->
+		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet mobile-menu, men känns onödigt.  -->
 		<!-- <div class="mobile-menu"></div> -->
 		<input
 			type="checkbox"
@@ -27,6 +31,7 @@
 			tabindex="-1"
 			aria-hidden="true"
 		></label>
+		<!-- Kunde inte lösa att få meny ikonerna att funka med keyboard med bara html & css :( -->
 		<label for="isMenuChecked" tabindex="0" class="mobile-menu__btn"
 			><span class="visually-hidden">Open Menu</span
 			><img
@@ -89,12 +94,15 @@
 						Where AI innovation meets sustainable luxury.<br />
 						Experience Bonz.ai.
 					</h2>
-					<button class="btn">Book your stay</button
-					><button class="btn btn--clear">Learn more</button>
+					<a href="./book-your-stay.html" class="btn"
+						>Book your stay</a
+					><a href="./about.html" class="btn btn--clear"
+						>Learn more</a
+					>
 				</div>
 			</section>
 			<!-- VISION SECTION -->
-			<section class="vision">
+			<section class="vision" id="skipTo">
 				<div class="wrapper">
 					<h2 class="section-title">Our vision</h2>
 					<p class="vision__description">
@@ -104,52 +112,60 @@
 						travel is both smart and sustainable.
 					</p>
 					<section class="grid grid--home">
-						<article class="card">
+						<article class="highlight-card">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>network_intelligence</i
 							>
-							<h3 class="card__title">AI-Powered Experience</h3>
-							<p class="card__description">
+							<h3 class="highlight-card__title">
+								AI-Powered Experience
+							</h3>
+							<p class="highlight-card__description">
 								Personalized room settings, smart
 								recommendations, and seamless service through
 								advanced AI technology.
 							</p>
 						</article>
-						<article class="card">
+						<article class="highlight-card">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>eco</i
 							>
-							<h3 class="card__title">100% Sustainable</h3>
-							<p class="card__description">
+							<h3 class="highlight-card__title">
+								100% Sustainable
+							</h3>
+							<p class="highlight-card__description">
 								Carbon-neutral operations, renewable energy, and
 								eco-friendly materials throughout the property.
 							</p>
 						</article>
-						<article class="card">
+						<article class="highlight-card">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>stars_2</i
 							>
-							<h3 class="card__title">Luxury Redefined</h3>
-							<p class="card__description">
+							<h3 class="highlight-card__title">
+								Luxury Redefined
+							</h3>
+							<p class="highlight-card__description">
 								Premium comfort meets environmental
 								responsibility without compromise on quality or
 								experience.
 							</p>
 						</article>
-						<article class="card">
+						<article class="highlight-card">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>smart_toy</i
 							>
-							<h3 class="card__title">Smart Everything</h3>
-							<p class="card__description">
+							<h3 class="highlight-card__title">
+								Smart Everything
+							</h3>
+							<p class="highlight-card__description">
 								Voice-controlled rooms, automated climate
 								control, and intelligent lighting that adapts to
 								you.
@@ -168,64 +184,76 @@
 						Our commitment to the planet, measured and verified
 					</p>
 					<section class="grid grid--home">
-						<article class="card card--center">
+						<article class="highlight-card highlight-card--center">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>water_drop</i
 							>
-							<h3 class="card__title card__title--small">
-								<span class="card__title card__title--green"
+							<h3
+								class="highlight-card__title highlight-card__title--small"
+							>
+								<span
+									class="highlight-card__title highlight-card__title--green"
 									>50% More</span
 								>Water Conservation
 							</h3>
-							<p class="card__description">
+							<p class="highlight-card__description">
 								Advanced water recycling and smart usage
 								monitoring
 							</p>
 						</article>
-						<article class="card card--center">
+						<article class="highlight-card highlight-card--center">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>solar_power</i
 							>
-							<h3 class="card__title card__title--small">
-								<span class="card__title card__title--green"
+							<h3
+								class="highlight-card__title highlight-card__title--small"
+							>
+								<span
+									class="highlight-card__title highlight-card__title--green"
 									>100%</span
 								>Solar Powered
 							</h3>
-							<p class="card__description">
+							<p class="highlight-card__description">
 								All energy sourced from renewable solar panels
 							</p>
 						</article>
-						<article class="card card--center">
+						<article class="highlight-card highlight-card--center">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>air_purifier_gen</i
 							>
-							<h3 class="card__title card__title--small">
-								<span class="card__title card__title--green"
+							<h3
+								class="highlight-card__title highlight-card__title--small"
+							>
+								<span
+									class="highlight-card__title highlight-card__title--green"
 									>99.9%</span
 								>Clean Air
 							</h3>
-							<p class="card__description">
+							<p class="highlight-card__description">
 								HEPA filtration and natural ventilation systems
 							</p>
 						</article>
-						<article class="card card--center">
+						<article class="highlight-card highlight-card--center">
 							<i
-								class="material-symbols-outlined card__icon"
+								class="material-symbols-outlined highlight-card__icon"
 								aria-hidden="true"
 								>cycle</i
 							>
-							<h3 class="card__title card__title--small">
-								<span class="card__title card__title--green"
+							<h3
+								class="highlight-card__title highlight-card__title--small"
+							>
+								<span
+									class="highlight-card__title highlight-card__title--green"
 									>95%</span
 								>Less Waste
 							</h3>
-							<p class="card__description">
+							<p class="highlight-card__description">
 								Comprehensive recycling and composting programs
 							</p>
 						</article>
@@ -264,7 +292,9 @@
 								suggestions</span
 							>
 						</p>
-						<button class="btn">Experience it yourself</button>
+						<a href="./about.html" class="btn"
+							>Experience it yourself</a
+						>
 					</section>
 					<img
 						src="./assets/photos/your-stay.jpg"
@@ -283,7 +313,9 @@
 						Join us in creating a sustainable future without
 						sacrificing luxury or comfort. Your perfect stay awaits.
 					</p>
-					<button class="btn btn--white">Book now</button>
+					<a href="./book-your-stay.html" class="btn btn--white"
+						>Book now</a
+					>
 				</div>
 			</section>
 		</main>
@@ -340,22 +372,22 @@
 						<h3 class="footer__title">Quick Links</h3>
 						<ul class="footer__ul">
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Privacy Policy</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Terms of Service</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Sustainablilty Report</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link">Careers</a>
+								<a href="#" class="footer__link">Careers</a>
 							</li>
 						</ul>
 					</section>

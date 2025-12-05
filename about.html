@@ -7,8 +7,12 @@
 		<title>About</title>
 	</head>
 	<body>
+		<!-- Upptäckte denna när vi gick igenom WCAG på hemsidor, smidig o ganska enkel att implementera -->
+		<a href="#skipTo" class="skip-to-content" tabindex="0"
+			>Skip to content</a
+		>
 		<!-- HAMBURGER MENU STUFF -->
-		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet menu, men känns onödigt.  -->
+		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet mobile-menu, men känns onödigt.  -->
 		<!-- <div class="mobile-menu"></div> -->
 		<input
 			type="checkbox"
@@ -23,6 +27,7 @@
 			tabindex="-1"
 			aria-hidden="true"
 		></label>
+		<!-- Kunde inte lösa att få meny ikonerna att funka med keyboard med bara html & css :( -->
 		<label for="isMenuChecked" tabindex="0" class="mobile-menu__btn"
 			><span class="visually-hidden">Open Menu</span
 			><img
@@ -84,7 +89,7 @@
 				</div>
 			</section>
 			<!-- OUR STORY SECTION -->
-			<section class="our-story">
+			<section class="our-story" id="skipTo">
 				<div class="wrapper">
 					<h2 class="section-title">Our story</h2>
 					<p class="our-story__description">
@@ -143,7 +148,7 @@
 						<article class="about-card">
 							<img
 								src="./assets/photos/facility-1.jpg"
-								alt=""
+								alt="Solar Powered"
 								class="about-card__img"
 							/>
 							<h2 class="about-card__title">Solar Powered</h2>
@@ -154,62 +159,72 @@
 						</article>
 						<article class="about-card">
 							<img
-								src="./assets/photos/facility-1.jpg"
-								alt=""
+								src="./assets/photos/facility-2.jpg"
+								alt="Farm-to-Table Restaurant"
 								class="about-card__img"
 							/>
-							<h2 class="about-card__title">Solar Powered</h2>
+							<h2 class="about-card__title">
+								Farm-to-Table Restaurant
+							</h2>
 							<p class="about-card__description">
-								State-of-the-art equipment powered by kinetic
-								energy from your workout
+								Organic, locally-sourced ingredients with
+								zero-waste cooking practices
 							</p>
 						</article>
 						<article class="about-card">
 							<img
-								src="./assets/photos/facility-1.jpg"
-								alt=""
+								src="./assets/photos/facility-3.jpg"
+								alt="Natural Pool & Spa"
 								class="about-card__img"
 							/>
-							<h2 class="about-card__title">Solar Powered</h2>
+							<h2 class="about-card__title">
+								Natural Pool & Spa
+							</h2>
 							<p class="about-card__description">
-								State-of-the-art equipment powered by kinetic
-								energy from your workout
+								Chemical-free saltwater pool and spa using
+								natural filtration systems
 							</p>
 						</article>
 						<article class="about-card">
 							<img
-								src="./assets/photos/facility-1.jpg"
-								alt=""
+								src="./assets/photos/facility-4.jpg"
+								alt="Smart Co-Working Space"
 								class="about-card__img"
 							/>
-							<h2 class="about-card__title">Solar Powered</h2>
+							<h2 class="about-card__title">
+								Smart Co-Working Space
+							</h2>
 							<p class="about-card__description">
-								State-of-the-art equipment powered by kinetic
-								energy from your workout
+								AI-optimized workspace with adjustable desks and
+								perfect ambient conditions
 							</p>
 						</article>
 						<article class="about-card">
 							<img
-								src="./assets/photos/facility-1.jpg"
-								alt=""
+								src="./assets/photos/facility-5.jpg"
+								alt="EV Charging Stations"
 								class="about-card__img"
 							/>
-							<h2 class="about-card__title">Solar Powered</h2>
+							<h2 class="about-card__title">
+								EV Charging Stations
+							</h2>
 							<p class="about-card__description">
-								State-of-the-art equipment powered by kinetic
-								energy from your workout
+								Free electric vehicle charging powered by our
+								renewable energy grid
 							</p>
 						</article>
 						<article class="about-card">
 							<img
-								src="./assets/photos/facility-1.jpg"
-								alt=""
+								src="./assets/photos/facility-6.jpg"
+								alt="High-Speed Connectivity"
 								class="about-card__img"
 							/>
-							<h2 class="about-card__title">Solar Powered</h2>
+							<h2 class="about-card__title">
+								High-Speed Connectivity
+							</h2>
 							<p class="about-card__description">
-								State-of-the-art equipment powered by kinetic
-								energy from your workout
+								Ultra-fast WiFi throughout the property with
+								smart network optimization
 							</p>
 						</article>
 					</section>
@@ -306,22 +321,22 @@
 						<h3 class="footer__title">Quick Links</h3>
 						<ul class="footer__ul">
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Privacy Policy</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Terms of Service</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Sustainablilty Report</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link">Careers</a>
+								<a href="#" class="footer__link">Careers</a>
 							</li>
 						</ul>
 					</section>

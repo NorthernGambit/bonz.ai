@@ -11,8 +11,12 @@
 		<title>Book Your Stay</title>
 	</head>
 	<body>
+		<!-- Upptäckte denna när vi gick igenom WCAG på hemsidor, smidig o ganska enkel att implementera -->
+		<a href="#skipTo" class="skip-to-content" tabindex="0"
+			>Skip to content</a
+		>
 		<!-- HAMBURGER MENU STUFF -->
-		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet menu, men känns onödigt.  -->
+		<!-- Visste inte hur jag skulle göra med BEM här eftersom detta är ett hack och inte vanlig html. Header måste vara syskon till min checkbox för att det ska funka. Tänkte använda en div runt det, med klassnamnet mobile-menu, men känns onödigt.  -->
 		<!-- <div class="mobile-menu"></div> -->
 		<input
 			type="checkbox"
@@ -27,6 +31,7 @@
 			tabindex="-1"
 			aria-hidden="true"
 		></label>
+		<!-- Kunde inte lösa att få meny ikonerna att funka med keyboard med bara html & css :( -->
 		<label for="isMenuChecked" tabindex="0" class="mobile-menu__btn"
 			><span class="visually-hidden">Open Menu</span
 			><img
@@ -76,7 +81,7 @@
 			</div>
 		</header>
 		<!-- MAIN -->
-		<main class="book">
+		<main class="book" id="skipTo">
 			<div class="wrapper">
 				<!-- BOOKING SECTION -->
 				<section class="book__title-section">
@@ -155,7 +160,7 @@
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="4.9 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
@@ -261,27 +266,27 @@
 					<article class="room-card">
 						<figure class="room-card__figure-box">
 							<img
-								src="./assets/photos/01-day.jpg"
-								alt="Inside view of EcoSmart Suite"
+								src="./assets/photos/02-day.jpg"
+								alt="Inside view of GreenTech Deluxe"
 								class="room-card__img"
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="4.7 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
 									aria-hidden="true"
 								>
 									star </i
-								>4.9
+								>4.7
 							</figcaption>
 						</figure>
 						<div class="room-card__info-box">
 							<header class="room-card__header">
 								<div class="room-card__title-box">
 									<h2 class="room-card__title">
-										EcoSmart Suite
+										GreenTech Deluxe
 									</h2>
 									<p class="room-card__title-sub">
 										<i
@@ -291,11 +296,11 @@
 											group
 										</i>
 										<span>Up to 2</span>
-										45 m2
+										35 m2
 									</p>
 								</div>
 								<p class="room-card__price-box">
-									<span class="room-card__price"> $299 </span>
+									<span class="room-card__price"> $199 </span>
 									<br />
 									<span class="room-card__price-sub">
 										per night
@@ -313,9 +318,11 @@
 									Features
 								</h3>
 								<ul class="room-card__ul">
-									<li class="room-card__li">King size bed</li>
-									<li class="room-card__li">Ocean View</li>
-									<li class="room-card__li">Smart climate</li>
+									<li class="room-card__li">
+										Queen size bed
+									</li>
+									<li class="room-card__li">City View</li>
+									<li class="room-card__li">Smart TV</li>
 									<li class="room-card__li">
 										Premium Toiletries
 									</li>
@@ -345,7 +352,7 @@
 									<li
 										class="room-card__li room-card__li--purple"
 									>
-										Digital Concierge
+										Predictive Climate
 									</li>
 								</ul>
 							</section>
@@ -360,7 +367,7 @@
 									Sustainability
 								</h3>
 								<p class="room-card__sustainability-sub">
-									100% renewable energy, recycled materials
+									Solar powered, low-flow water systems
 								</p>
 							</section>
 							<footer class="room-card__footer">
@@ -373,27 +380,27 @@
 					<article class="room-card">
 						<figure class="room-card__figure-box">
 							<img
-								src="./assets/photos/01-day.jpg"
-								alt="Inside view of EcoSmart Suite"
+								src="./assets/photos/04-day.jpg"
+								alt="Inside view of Sustainable Studio"
 								class="room-card__img"
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="4.2 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
 									aria-hidden="true"
 								>
 									star </i
-								>4.9
+								>4.2
 							</figcaption>
 						</figure>
 						<div class="room-card__info-box">
 							<header class="room-card__header">
 								<div class="room-card__title-box">
 									<h2 class="room-card__title">
-										EcoSmart Suite
+										Sustainable Studio
 									</h2>
 									<p class="room-card__title-sub">
 										<i
@@ -403,11 +410,11 @@
 											group
 										</i>
 										<span>Up to 2</span>
-										45 m2
+										25 m2
 									</p>
 								</div>
 								<p class="room-card__price-box">
-									<span class="room-card__price"> $299 </span>
+									<span class="room-card__price"> $149 </span>
 									<br />
 									<span class="room-card__price-sub">
 										per night
@@ -425,11 +432,10 @@
 									Features
 								</h3>
 								<ul class="room-card__ul">
-									<li class="room-card__li">King size bed</li>
-									<li class="room-card__li">Ocean View</li>
-									<li class="room-card__li">Smart climate</li>
+									<li class="room-card__li">Double Bed</li>
+									<li class="room-card__li">Garden View</li>
 									<li class="room-card__li">
-										Premium Toiletries
+										Eco-Friendly Bath
 									</li>
 								</ul>
 							</section>
@@ -444,11 +450,6 @@
 									AI Features
 								</h3>
 								<ul class="room-card__ul">
-									<li
-										class="room-card__li room-card__li--purple"
-									>
-										Voice Control
-									</li>
 									<li
 										class="room-card__li room-card__li--purple"
 									>
@@ -472,7 +473,7 @@
 									Sustainability
 								</h3>
 								<p class="room-card__sustainability-sub">
-									100% renewable energy, recycled materials
+									Bamboo furniture, organic linens
 								</p>
 							</section>
 							<footer class="room-card__footer">
@@ -485,27 +486,27 @@
 					<article class="room-card">
 						<figure class="room-card__figure-box">
 							<img
-								src="./assets/photos/01-day.jpg"
-								alt="Inside view of EcoSmart Suite"
+								src="./assets/photos/05-day.jpg"
+								alt="Inside view of Nature’s Haven"
 								class="room-card__img"
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="4.6 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
 									aria-hidden="true"
 								>
 									star </i
-								>4.9
+								>4.6
 							</figcaption>
 						</figure>
 						<div class="room-card__info-box">
 							<header class="room-card__header">
 								<div class="room-card__title-box">
 									<h2 class="room-card__title">
-										EcoSmart Suite
+										Nature’s Haven
 									</h2>
 									<p class="room-card__title-sub">
 										<i
@@ -514,8 +515,8 @@
 										>
 											group
 										</i>
-										<span>Up to 2</span>
-										45 m2
+										<span>Up to 3</span>
+										40 m2
 									</p>
 								</div>
 								<p class="room-card__price-box">
@@ -538,11 +539,9 @@
 								</h3>
 								<ul class="room-card__ul">
 									<li class="room-card__li">King size bed</li>
-									<li class="room-card__li">Ocean View</li>
-									<li class="room-card__li">Smart climate</li>
-									<li class="room-card__li">
-										Premium Toiletries
-									</li>
+									<li class="room-card__li">Forest View</li>
+									<li class="room-card__li">Balcony</li>
+									<li class="room-card__li">Air Purifier</li>
 								</ul>
 							</section>
 							<section class="room-card__features">
@@ -569,7 +568,7 @@
 									<li
 										class="room-card__li room-card__li--purple"
 									>
-										Digital Concierge
+										Wellness Monitoring
 									</li>
 								</ul>
 							</section>
@@ -584,7 +583,7 @@
 									Sustainability
 								</h3>
 								<p class="room-card__sustainability-sub">
-									100% renewable energy, recycled materials
+									Living plant walls, carbon-negative
 								</p>
 							</section>
 							<footer class="room-card__footer">
@@ -597,27 +596,27 @@
 					<article class="room-card">
 						<figure class="room-card__figure-box">
 							<img
-								src="./assets/photos/01-day.jpg"
-								alt="Inside view of EcoSmart Suite"
+								src="./assets/photos/07-day.jpg"
+								alt="Inside view of AI Presidential Suite"
 								class="room-card__img"
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="5 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
 									aria-hidden="true"
 								>
 									star </i
-								>4.9
+								>5.0
 							</figcaption>
 						</figure>
 						<div class="room-card__info-box">
 							<header class="room-card__header">
 								<div class="room-card__title-box">
 									<h2 class="room-card__title">
-										EcoSmart Suite
+										AI Presidential Suite
 									</h2>
 									<p class="room-card__title-sub">
 										<i
@@ -626,12 +625,12 @@
 										>
 											group
 										</i>
-										<span>Up to 2</span>
-										45 m2
+										<span>Up to 4</span>
+										82 m2
 									</p>
 								</div>
 								<p class="room-card__price-box">
-									<span class="room-card__price"> $299 </span>
+									<span class="room-card__price"> $499 </span>
 									<br />
 									<span class="room-card__price-sub">
 										per night
@@ -649,12 +648,16 @@
 									Features
 								</h3>
 								<ul class="room-card__ul">
-									<li class="room-card__li">King size bed</li>
-									<li class="room-card__li">Ocean View</li>
-									<li class="room-card__li">Smart climate</li>
 									<li class="room-card__li">
-										Premium Toiletries
+										2 King size beds
 									</li>
+									<li class="room-card__li">
+										Panoramic View
+									</li>
+									<li class="room-card__li">
+										Private Terrace
+									</li>
+									<li class="room-card__li">Luxury Bath</li>
 								</ul>
 							</section>
 							<section class="room-card__features">
@@ -671,17 +674,17 @@
 									<li
 										class="room-card__li room-card__li--purple"
 									>
-										Voice Control
+										Full AI Suite
 									</li>
 									<li
 										class="room-card__li room-card__li--purple"
 									>
-										Smart Lighting
+										Predictive Service
 									</li>
 									<li
 										class="room-card__li room-card__li--purple"
 									>
-										Digital Concierge
+										Holographic Display
 									</li>
 								</ul>
 							</section>
@@ -696,7 +699,7 @@
 									Sustainability
 								</h3>
 								<p class="room-card__sustainability-sub">
-									100% renewable energy, recycled materials
+									Net-zero carbon, rainwater harvesting
 								</p>
 							</section>
 							<footer class="room-card__footer">
@@ -709,27 +712,27 @@
 					<article class="room-card">
 						<figure class="room-card__figure-box">
 							<img
-								src="./assets/photos/01-day.jpg"
-								alt="Inside view of EcoSmart Suite"
+								src="./assets/photos/09-day.jpg"
+								alt="Inside view of Urban EcoLoft"
 								class="room-card__img"
 							/>
 							<figcaption
 								class="room-card__rating"
-								aria-label="4.9 out of 5 stars"
+								aria-label="4.8 out of 5 stars rating"
 							>
 								<i
 									class="material-symbols-outlined room-card__icon room-card__icon--yellow"
 									aria-hidden="true"
 								>
 									star </i
-								>4.9
+								>4.8
 							</figcaption>
 						</figure>
 						<div class="room-card__info-box">
 							<header class="room-card__header">
 								<div class="room-card__title-box">
 									<h2 class="room-card__title">
-										EcoSmart Suite
+										Urban EcoLoft
 									</h2>
 									<p class="room-card__title-sub">
 										<i
@@ -739,11 +742,11 @@
 											group
 										</i>
 										<span>Up to 2</span>
-										45 m2
+										30 m2
 									</p>
 								</div>
 								<p class="room-card__price-box">
-									<span class="room-card__price"> $299 </span>
+									<span class="room-card__price"> $179 </span>
 									<br />
 									<span class="room-card__price-sub">
 										per night
@@ -761,12 +764,11 @@
 									Features
 								</h3>
 								<ul class="room-card__ul">
-									<li class="room-card__li">King size bed</li>
-									<li class="room-card__li">Ocean View</li>
-									<li class="room-card__li">Smart climate</li>
 									<li class="room-card__li">
-										Premium Toiletries
+										Queen size bed
 									</li>
+									<li class="room-card__li">High Ceiling</li>
+									<li class="room-card__li">Natural Light</li>
 								</ul>
 							</section>
 							<section class="room-card__features">
@@ -780,11 +782,6 @@
 									AI Features
 								</h3>
 								<ul class="room-card__ul">
-									<li
-										class="room-card__li room-card__li--purple"
-									>
-										Voice Control
-									</li>
 									<li
 										class="room-card__li room-card__li--purple"
 									>
@@ -808,7 +805,7 @@
 									Sustainability
 								</h3>
 								<p class="room-card__sustainability-sub">
-									100% renewable energy, recycled materials
+									Upcycled furniture, zero waste
 								</p>
 							</section>
 							<footer class="room-card__footer">
@@ -874,22 +871,22 @@
 						<h3 class="footer__title">Quick Links</h3>
 						<ul class="footer__ul">
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Privacy Policy</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Terms of Service</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link"
+								<a href="#" class="footer__link"
 									>Sustainablilty Report</a
 								>
 							</li>
 							<li class="footer__li">
-								<a href="" class="footer__link">Careers</a>
+								<a href="#" class="footer__link">Careers</a>
 							</li>
 						</ul>
 					</section>
