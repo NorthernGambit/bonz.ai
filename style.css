@@ -1270,8 +1270,7 @@ a {
 			.vision__description {
 				padding: 0;
 				line-height: 145%;
-				letter-spacing: 110%;
-				text-align: start;
+				text-align: center;
 			}
 		}
 	}
